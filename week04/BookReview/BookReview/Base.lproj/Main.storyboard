@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VaP-p0-3VF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1259" y="125"/>
+        </scene>
+        <!--모두의 책 리뷰-->
+        <scene sceneID="c5G-tI-s51">
+            <objects>
+                <tableViewController id="axV-WG-ikD" customClass="ReviewTableViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="23A-55-nrX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" textLabel="eoI-KM-cjk" detailTextLabel="eBh-Q2-BNJ" style="IBUITableViewCellStyleSubtitle" id="ut3-CX-sYe">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ut3-CX-sYe" id="v20-i1-lC3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eoI-KM-cjk">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eBh-Q2-BNJ">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="axV-WG-ikD" id="5C1-ZY-PV7"/>
+                            <outlet property="delegate" destination="axV-WG-ikD" id="Spa-kg-FdO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="모두의 책 리뷰" id="dwS-yF-Yra">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aDp-BB-bUz">
+                            <color key="tintColor" red="0.94577568769999998" green="0.45209741590000002" blue="0.38230520489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="63X-zA-1C9" kind="show" id="Tf7-ov-46K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeU-h6-dQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="147"/>
+        </scene>
+        <!--모두의 책 리뷰 쓰기-->
+        <scene sceneID="P5G-UC-E2N">
+            <objects>
+                <viewController id="63X-zA-1C9" customClass="WriteViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rEB-b4-w4D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-1i-5wD">
+                                <rect key="frame" x="20" y="154.5" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yo8-8d-8Ud">
+                                <rect key="frame" x="70" y="148" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECV-IL-8XD">
+                                <rect key="frame" x="70" y="212" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1L-2U-hPP">
+                                <rect key="frame" x="20" y="218.5" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리뷰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ4-Qi-xDz">
+                                <rect key="frame" x="20" y="282.5" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NfK-SX-vEL">
+                                <rect key="frame" x="70" y="276" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0OK-hm-wsw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2uu-1i-5wD" firstAttribute="centerY" secondItem="Yo8-8d-8Ud" secondAttribute="centerY" id="0e2-Me-jrd"/>
+                            <constraint firstItem="ECV-IL-8XD" firstAttribute="leading" secondItem="u1L-2U-hPP" secondAttribute="trailing" constant="20" id="1lz-hr-OXO"/>
+                            <constraint firstItem="NfK-SX-vEL" firstAttribute="top" secondItem="ECV-IL-8XD" secondAttribute="bottom" constant="30" id="2GG-xx-SWw"/>
+                            <constraint firstItem="0OK-hm-wsw" firstAttribute="trailing" secondItem="ECV-IL-8XD" secondAttribute="trailing" constant="20" id="6Gp-ke-Bwh"/>
+                            <constraint firstItem="Yo8-8d-8Ud" firstAttribute="leading" secondItem="2uu-1i-5wD" secondAttribute="trailing" constant="20" id="Ixo-vA-3gf"/>
+                            <constraint firstItem="jQ4-Qi-xDz" firstAttribute="centerY" secondItem="NfK-SX-vEL" secondAttribute="centerY" id="T8Q-Wn-2zV"/>
+                            <constraint firstItem="NfK-SX-vEL" firstAttribute="leading" secondItem="jQ4-Qi-xDz" secondAttribute="trailing" constant="20" id="cQv-8L-hOq"/>
+                            <constraint firstItem="ECV-IL-8XD" firstAttribute="top" secondItem="Yo8-8d-8Ud" secondAttribute="bottom" constant="30" id="cmR-KB-kkY"/>
+                            <constraint firstItem="jQ4-Qi-xDz" firstAttribute="leading" secondItem="0OK-hm-wsw" secondAttribute="leading" constant="20" id="cmg-G2-qUE"/>
+                            <constraint firstItem="0OK-hm-wsw" firstAttribute="trailing" secondItem="NfK-SX-vEL" secondAttribute="trailing" constant="20" id="fbh-b3-EeH"/>
+                            <constraint firstItem="2uu-1i-5wD" firstAttribute="leading" secondItem="0OK-hm-wsw" secondAttribute="leading" constant="20" id="h3B-ND-JK7"/>
+                            <constraint firstItem="Yo8-8d-8Ud" firstAttribute="top" secondItem="0OK-hm-wsw" secondAttribute="top" constant="60" id="l5w-bX-ML0"/>
+                            <constraint firstItem="u1L-2U-hPP" firstAttribute="centerY" secondItem="ECV-IL-8XD" secondAttribute="centerY" id="sGh-XA-i3P"/>
+                            <constraint firstItem="u1L-2U-hPP" firstAttribute="leading" secondItem="0OK-hm-wsw" secondAttribute="leading" constant="20" id="y8Z-x2-AVq"/>
+                            <constraint firstItem="0OK-hm-wsw" firstAttribute="trailing" secondItem="Yo8-8d-8Ud" secondAttribute="trailing" constant="20" id="zVt-rA-gnZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="모두의 책 리뷰 쓰기" id="siq-ze-kxZ">
+                        <barButtonItem key="rightBarButtonItem" title="완료" systemItem="done" id="5L1-hX-Nvi">
+                            <color key="tintColor" red="0.94577568769999998" green="0.45209741590000002" blue="0.38230520489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="clickedDoneButton:" destination="63X-zA-1C9" id="972-Db-goZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorTextField" destination="ECV-IL-8XD" id="fat-dl-rmY"/>
+                        <outlet property="doneButton" destination="5L1-hX-Nvi" id="qBg-YX-JO7"/>
+                        <outlet property="reviewTextField" destination="NfK-SX-vEL" id="ckg-74-AGB"/>
+                        <outlet property="titleTextField" destination="Yo8-8d-8Ud" id="i2n-Or-sgL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iai-Yw-BLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515.9420289855075" y="146.65178571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eMl-qd-gjs">
+            <objects>
+                <navigationController id="VaP-p0-3VF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="788-jr-pA5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="axV-WG-ikD" kind="relationship" relationship="rootViewController" id="m9h-WK-sN3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOJ-FV-5jw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
