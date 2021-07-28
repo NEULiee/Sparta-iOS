@@ -44,26 +44,28 @@ class FingerGameViewController: UIViewController {
     func touchCountDidChange () {
         timer?.invalidate()
         
-        
-        
-        
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
-            for roundView in self.gameView.touchToRoundView.values {
-                let randomChoice = Bool.random()
-                
-                UIView.animate(withDuration: 1) {
-                    if randomChoice {
-                        roundView.backgroundColor = UIColor(named: "green")
-                    }
-                    else {
-                        roundView.backgroundColor = UIColor(named: "orange")
-                    }
-                    
+            
+            let count = self.gameView.touchToRoundView.count
+            let randomChoice = Int.random(in: 0..<count)
+            
+            let roundViews = [UIView](self.gameView.touchToRoundView.values)
+            
+            for i in 0..<count {
+        
+                let roundView = roundViews[i]
+                if i == randomChoice {
+                    UIView.animate(withDuration: 1) {
+
+                    roundView.backgroundColor = UIColor(named: "green")
+                        
+                        
                     // 크기 변화
                     let center = roundView.center
                     roundView.frame.size = CGSize(width: 120, height: 120)
                     roundView.layer.cornerRadius = 60
                     roundView.center = center
+                    }
                 }
             }
         }
