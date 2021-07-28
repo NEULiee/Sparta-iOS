@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>477325566750-h0sn4bi0h970p5o1kooshvfr8ilgl7d1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.477325566750-h0sn4bi0h970p5o1kooshvfr8ilgl7d1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDwKuPiTTWCtdjLIaLbau0y47OEU6_FtZk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>477325566750</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.neuli.FingerGame</string>
+	<key>PROJECT_ID</key>
+	<string>sparta-finger-game-20263</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sparta-finger-game-20263.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:477325566750:ios:32413613ba408013fd9f0f</string>
+</dict>
+</plist>

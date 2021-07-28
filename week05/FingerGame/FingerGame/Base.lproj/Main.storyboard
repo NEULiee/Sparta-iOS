@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Finger Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FingerStartViewController" customModule="FingerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="손가락 묶기 게임^&amp;^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xON-1V-0hK">
+                                <rect key="frame" x="81" y="244" width="252" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOQ-qL-NEk">
+                                <rect key="frame" x="192" y="380" width="30" height="30"/>
+                                <state key="normal" title="시작">
+                                    <color key="titleColor" name="yellow"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4Kx-U3-7kk" kind="presentation" modalPresentationStyle="fullScreen" id="Xfc-zC-fEm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xON-1V-0hK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="hGp-Ho-nPK"/>
+                            <constraint firstItem="xON-1V-0hK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jD2-vJ-WrR"/>
+                            <constraint firstItem="LOQ-qL-NEk" firstAttribute="top" secondItem="xON-1V-0hK" secondAttribute="bottom" constant="100" id="lh5-Jc-i3S"/>
+                            <constraint firstItem="LOQ-qL-NEk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nAE-hu-RF3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="115"/>
+        </scene>
+        <!--Finger Game View Controller-->
+        <scene sceneID="ydR-rI-1GY">
+            <objects>
+                <viewController id="4Kx-U3-7kk" customClass="FingerGameViewController" customModule="FingerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ayz-Ct-cEm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjx-42-m7M">
+                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="La3-Sd-FTR"/>
+                                    <constraint firstAttribute="height" constant="40" id="YZf-q7-fFX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="4Kx-U3-7kk" eventType="touchUpInside" id="k2N-ga-otD"/>
+                                </connections>
+                            </button>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4s-Hz-Osf" customClass="FingerGameView" customModule="FingerGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZV-Ls-21z">
+                                <rect key="frame" x="207" y="64" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4mP-i7-1Uo"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rZV-Ls-21z" firstAttribute="centerX" secondItem="ayz-Ct-cEm" secondAttribute="centerX" id="6D5-JJ-P75"/>
+                            <constraint firstItem="Jjx-42-m7M" firstAttribute="top" secondItem="4mP-i7-1Uo" secondAttribute="top" id="7tt-ni-MF9"/>
+                            <constraint firstItem="p4s-Hz-Osf" firstAttribute="leading" secondItem="4mP-i7-1Uo" secondAttribute="leading" id="E2g-1e-uL5"/>
+                            <constraint firstItem="Jjx-42-m7M" firstAttribute="leading" secondItem="4mP-i7-1Uo" secondAttribute="leading" constant="20" id="FEI-5F-2MO"/>
+                            <constraint firstItem="rZV-Ls-21z" firstAttribute="centerY" secondItem="Jjx-42-m7M" secondAttribute="centerY" id="Qth-32-mic"/>
+                            <constraint firstItem="p4s-Hz-Osf" firstAttribute="bottom" secondItem="4mP-i7-1Uo" secondAttribute="bottom" id="YDU-l7-Jht"/>
+                            <constraint firstItem="p4s-Hz-Osf" firstAttribute="top" secondItem="Jjx-42-m7M" secondAttribute="bottom" constant="8" symbolic="YES" id="jmq-RT-kJ4"/>
+                            <constraint firstItem="p4s-Hz-Osf" firstAttribute="trailing" secondItem="4mP-i7-1Uo" secondAttribute="trailing" id="sgG-Wm-8kQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="p4s-Hz-Osf" id="w44-O0-Rxv"/>
+                        <outlet property="secondsLabel" destination="rZV-Ls-21z" id="tPF-LX-ZKb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6K-mQ-m6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="green">
+            <color red="0.61960784313725492" green="0.87058823529411766" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="0.96862745098039216" green="0.91764705882352937" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
